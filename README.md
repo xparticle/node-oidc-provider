@@ -3,6 +3,10 @@
 oidc-provider is an OAuth 2.0 Authorization Server with [OpenID Connect][openid-connect] and many
 additional features and standards implemented.
 
+# Changes
+This is a fork of upstream node-oidc-provider project to introduce Multi-tenant constructs for Hybrid SaaS Identity. To keep the changes minimal, pretty much all modifications are handled in the implementation project rather than this library. Other than debugging statements that were added to facilitate understanding the internals, the only line of change really is provider.js accepts an Account object instead of just findAccount method. This will allow the implementation project to inject provider specific concrete Account methods for not just finAccount but login as well.
+
+
 **Table of Contents**
 
 - [Implemented specs & features](#implemented-specs--features)
